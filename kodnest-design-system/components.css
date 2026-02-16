@@ -1,0 +1,148 @@
+/**
+ * KodNest Premium Build System — Components
+ * Same hover effect and border radius everywhere. No drop shadows.
+ */
+
+/* ─── BUTTONS ─── */
+.kn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kn-space-1);
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid transparent;
+  cursor: pointer;
+  transition: border-color var(--kn-transition), background-color var(--kn-transition), color var(--kn-transition);
+}
+
+/* Primary — solid deep red */
+.kn-btn--primary {
+  background: var(--kn-accent);
+  color: white;
+  border-color: var(--kn-accent);
+}
+
+.kn-btn--primary:hover {
+  background: #6D0000;
+  border-color: #6D0000;
+}
+
+/* Secondary — outlined */
+.kn-btn--secondary {
+  background: transparent;
+  color: var(--kn-text);
+  border-color: var(--kn-border);
+}
+
+.kn-btn--secondary:hover {
+  border-color: var(--kn-text-muted);
+  background: rgba(17, 17, 17, 0.04);
+}
+
+/* Button group for secondary panel */
+.kn-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-1);
+  margin-top: var(--kn-space-2);
+}
+
+/* ─── INPUTS ─── */
+.kn-input {
+  width: 100%;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body);
+  color: var(--kn-text);
+  background: white;
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  transition: border-color var(--kn-transition), box-shadow var(--kn-transition);
+}
+
+.kn-input:focus {
+  outline: none;
+  border-color: var(--kn-border-focus);
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.12);
+}
+
+.kn-input::placeholder {
+  color: var(--kn-text-muted);
+  opacity: 0.8;
+}
+
+/* Textarea */
+.kn-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ─── CARDS ─── */
+.kn-card {
+  background: white;
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  padding: var(--kn-space-3);
+}
+
+.kn-card + .kn-card {
+  margin-top: var(--kn-space-2);
+}
+
+/* ─── STATUS BADGE ─── */
+.kn-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid var(--kn-border);
+  background: white;
+  color: var(--kn-text-muted);
+}
+
+.kn-badge--not-started { }
+.kn-badge--in-progress { color: var(--kn-warning); border-color: var(--kn-warning); }
+.kn-badge--shipped { color: var(--kn-success); border-color: var(--kn-success); }
+
+/* ─── SECONDARY PANEL ELEMENTS ─── */
+.kn-panel-section {
+  margin-bottom: var(--kn-space-3);
+}
+
+.kn-panel-section__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--kn-text-muted);
+  margin-bottom: var(--kn-space-1);
+}
+
+/* Copyable prompt box */
+.kn-prompt-box {
+  font-family: "SF Mono", "Monaco", "Inconsolata", monospace;
+  font-size: 0.875rem;
+  padding: var(--kn-space-2);
+  background: #F2F1EE;
+  border: var(--kn-border-width) solid var(--kn-border);
+  border-radius: var(--kn-radius);
+  color: var(--kn-text);
+  word-break: break-all;
+  position: relative;
+}
+
+.kn-prompt-box__copy {
+  position: absolute;
+  top: var(--kn-space-1);
+  right: var(--kn-space-1);
+}
+
+/* Secondary panel action buttons */
+.kn-panel-actions .kn-btn {
+  margin-right: var(--kn-space-1);
+  margin-bottom: var(--kn-space-1);
+}

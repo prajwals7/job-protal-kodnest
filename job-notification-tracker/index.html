@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Notification Tracker</title>
+  <link rel="stylesheet" href="../kodnest-design-system/index.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="kn-page jnt-app">
+    <header class="jnt-top-bar">
+      <a href="#/" class="jnt-logo">Job Notification Tracker</a>
+      <button type="button" class="jnt-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="jnt-nav" aria-label="Main">
+        <a href="#/dashboard" class="jnt-nav__link">Dashboard</a>
+        <a href="#/saved" class="jnt-nav__link">Saved</a>
+        <a href="#/digest" class="jnt-nav__link">Digest</a>
+        <a href="#/settings" class="jnt-nav__link">Settings</a>
+        <a href="#/jt/07-test" class="jnt-nav__link">Tests</a>
+        <a href="#/jt/proof" class="jnt-nav__link">Proof</a>
+      </nav>
+    </header>
+
+    <main class="jnt-main">
+      <div id="jnt-page" class="jnt-page-content">
+        <!-- Route content injected by router -->
+      </div>
+    </main>
+    <div id="jnt-modal" class="jnt-modal" aria-hidden="true">
+      <div class="jnt-modal__backdrop"></div>
+      <div class="jnt-modal__content">
+        <button type="button" class="jnt-modal__close" aria-label="Close">&times;</button>
+        <div id="jnt-modal__body"></div>
+      </div>
+    </div>
+  </div>
+  <script src="jobs.js"></script>
+  <script src="router.js"></script>
+</body>
+
+</html>
