@@ -1,8 +1,0 @@
-{
-    "name": "job-protal-kodnest",
-    "version": "1.0.0",
-    "description": "Job Notification Tracker with KodNest Design System",
-    "scripts": {
-        "start": "serve ."
-    }
-}
